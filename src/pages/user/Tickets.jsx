@@ -8,7 +8,7 @@ import { toast } from "react-hot-toast";
 
 const Tickets = () => {
   const [open, setOpen] = useState(false);
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedTicket, setSelectedTicket] = useState(null);
 
   const ticketsQuery = useQuery({
     queryKey: ["tickets"],
@@ -36,15 +36,10 @@ const Tickets = () => {
             key={ticket._id}
             ticket={ticket}
             setOpen={setOpen}
-            setSelectedEvent={setSelectedEvent}
+            setSelectedTicket={setSelectedTicket}
           />
         ))}
-        <TicketModal
-          open={open}
-          setOpen={setOpen}
-          ticket={selectedTicket}
-          event={selectedEvent}
-        />
+        <TicketModal open={open} setOpen={setOpen} ticket={selectedTicket} />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import { Card, Typography, Button } from "@material-tailwind/react";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { QrCodeIcon } from "@heroicons/react/24/outline";
 
-const Ticket = ({ ticket, setOpen, setSelectedEvent }) => {
+const Ticket = ({ ticket, setOpen, setSelectedTicket }) => {
   return (
     <Card
       key={ticket?._id}
@@ -46,7 +46,7 @@ const Ticket = ({ ticket, setOpen, setSelectedEvent }) => {
             color="white"
             className="p-2"
             onClick={() => {
-              setSelectedEvent(ticket?.event);
+              setSelectedTicket(ticket);
               setOpen(true);
             }}
           >

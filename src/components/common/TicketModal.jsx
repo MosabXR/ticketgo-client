@@ -13,7 +13,7 @@ import QRCode from "react-qr-code";
 
 import { XMarkIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
-const TicketModal = ({ open, setOpen, ticket, event }) => {
+const TicketModal = ({ open, setOpen, ticket }) => {
   const handleOpen = () => setOpen(!open);
 
   return (
@@ -45,7 +45,7 @@ const TicketModal = ({ open, setOpen, ticket, event }) => {
       </DialogBody>
       <DialogFooter className="flex flex-col gap-4 justify-center items-center">
         <Typography variant="h4" color="black" className="text-center">
-          {event?.name}
+          {ticket?.event?.name}
         </Typography>
         <Button className="flex justify-center items-center gap-2" disabled>
           <ArrowDownTrayIcon className="h-4 w-4 stroke-2" />
