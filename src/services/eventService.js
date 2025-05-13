@@ -3,7 +3,8 @@ import axios from "axios";
 const createEvent = async (data) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/v1/events",
+      // "http://localhost:8000/api/v1/events",
+      "https://ticketgo-server.onrender.com/api/v1/events",
       data,
       {
         headers: {
@@ -19,7 +20,10 @@ const createEvent = async (data) => {
 
 const getEvents = async () => {
   try {
-    const response = await axios.get("http://localhost:8000/api/v1/events");
+    // const response = await axios.get("http://localhost:8000/api/v1/events");
+    const response = await axios.get(
+      "https://ticketgo-server.onrender.com/api/v1/events"
+    );
     return response.data;
   } catch (err) {
     return err.response.data;
@@ -29,7 +33,8 @@ const getEvents = async () => {
 const getEventById = async (id) => {
   try {
     const response = await axios.get(
-      `http://localhost:8000/api/v1/events/${id}`
+      // `http://localhost:8000/api/v1/events/${id}`
+      `https://ticketgo-server.onrender.com/api/v1/events/${id}`
     );
     return response.data;
   } catch (err) {
@@ -40,7 +45,8 @@ const getEventById = async (id) => {
 const updateEvent = async (id, data) => {
   try {
     const response = await axios.patch(
-      `http://localhost:8000/api/v1/events/${id}`,
+      // `http://localhost:8000/api/v1/events/${id}`,
+      `https://ticketgo-server.onrender.com/api/v1/events/${id}`,
       data,
       {
         headers: {
@@ -57,7 +63,8 @@ const updateEvent = async (id, data) => {
 const deleteEvent = async (id) => {
   try {
     const response = await axios.delete(
-      `http://localhost:8000/api/v1/events/${id}`,
+      // `http://localhost:8000/api/v1/events/${id}`,
+      `https://ticketgo-server.onrender.com/api/v1/events/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

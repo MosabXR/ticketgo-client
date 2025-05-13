@@ -3,7 +3,8 @@ import axios from "axios";
 const signUp = async (data) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/v1/users/signup",
+      // "http://localhost:8000/api/v1/users/signup",
+      "https://ticketgo-server.onrender.com/api/v1/users/signup",
       data
     );
     return response.data;
@@ -15,7 +16,8 @@ const signUp = async (data) => {
 const signIn = async (data) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/v1/users/signin",
+      // "http://localhost:8000/api/v1/users/signin",
+      "https://ticketgo-server.onrender.com/api/v1/users/signin",
       data
     );
     return response.data;
