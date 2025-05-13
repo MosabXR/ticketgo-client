@@ -105,7 +105,9 @@ const DefaultNavbar = () => {
             </Typography>
           </Link>
           <div className="flex items-center gap-4">
-            {isLoggedIn ? navList : navAuth}
+            {/* {isLoggedIn ? navList : navAuth} */}
+            {navList}
+            {navAuth}
 
             <IconButton
               variant="text"
