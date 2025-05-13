@@ -39,7 +39,7 @@ const TicketModal = ({ open, setOpen, event }) => {
       </DialogHeader>
       <DialogBody className="space-y-4 pb-6 flex justify-center items-center">
         <QRCode
-          value={`http://localhost:8000/ticket/${event?._id}`}
+          value={`https://ticketgo-gold.vercel.app/ticket/${event?._id}`}
           size={200}
         />
       </DialogBody>
