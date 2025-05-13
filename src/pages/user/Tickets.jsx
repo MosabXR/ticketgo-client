@@ -39,7 +39,12 @@ const Tickets = () => {
             setSelectedEvent={setSelectedEvent}
           />
         ))}
-        <TicketModal open={open} setOpen={setOpen} event={selectedEvent} />
+        <TicketModal
+          open={open}
+          setOpen={setOpen}
+          ticket={selectedTicket}
+          event={selectedEvent}
+        />
       </div>
     </>
   );

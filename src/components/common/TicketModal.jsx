@@ -13,7 +13,7 @@ import QRCode from "react-qr-code";
 
 import { XMarkIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
-const TicketModal = ({ open, setOpen, event }) => {
+const TicketModal = ({ open, setOpen, ticket, event }) => {
   const handleOpen = () => setOpen(!open);
 
   return (
@@ -39,7 +39,7 @@ const TicketModal = ({ open, setOpen, event }) => {
       </DialogHeader>
       <DialogBody className="space-y-4 pb-6 flex justify-center items-center">
         <QRCode
-          value={`https://ticketgo-gold.vercel.app/ticket/${event?._id}`}
+          value={`https://ticketgo-gold.vercel.app/ticket/${ticket?._id}`}
           size={200}
         />
       </DialogBody>
